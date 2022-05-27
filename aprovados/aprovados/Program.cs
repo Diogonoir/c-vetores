@@ -1,50 +1,60 @@
 ﻿using System;
 
-class aprovados
+class Programa
 {
     static void Main(string[] args)
-
     {
-        Console.WriteLine("Projeto  -  aprovados");
-        Console.WriteLine();
 
-        int N;
-        double media;
+        int qtdeAlunos;
 
-        Console.WriteLine("Quantos alunos serão digitados");
-        N = int.Parse(Console.ReadLine());
-        //Primeiro vem a pergunta, para assim depois vir o Vetor, por causa do int.Parse
 
-        string[] nomes = new string[N];
-        double[] notas1 = new double[N];
-        double[] notas2 = new double[N];
-        //Aqui foi definido todos os vetores alocando com a int N
+        Console.WriteLine("Quer digitar a nota de quantos alunos?");
+        qtdeAlunos = int.Parse(Console.ReadLine());
 
-        for (int i = 0; i < N; i++)
+        string[] VetorNomeAlunos = new string[qtdeAlunos];
+        float[,] MatrizNota = new float[qtdeAlunos, 2];
+
+
+        //esse primeiro For simboliza a manipulação das linhas
+        for (int indiceLinhaMatriz = 0; indiceLinhaMatriz < qtdeAlunos; indiceLinhaMatriz++)
         {
-            Console.WriteLine("Digite o Nome, Primeira e Segunda nota do " + (i + 1) + "º Aluno");
-            nomes[i] = Console.ReadLine();
-            notas1[i] = double.Parse(Console.ReadLine());
-            notas2[i] = double.Parse(Console.ReadLine());
-
-            //O for para o usuario definir a quantidade de pessoas e notas que ele quer escrever
-        }
-
-        Console.WriteLine("Alunos aprovados: ");
-
-        for (int i = 0; i < N; i++)
-        {
-            media = notas1[i] + notas2[i] / 2;
-
-            if (media >= 6)
+            Console.WriteLine("Digite nome " + (indiceLinhaMatriz + 1) + " aluno");
+            VetorNomeAlunos[indiceLinhaMatriz] = Console.ReadLine();
+            //esse segundo For simboliza a manipulação das colunas
+            for (int indiceColunaMatriz = 0; indiceColunaMatriz < 2; indiceColunaMatriz++)
             {
-                Console.WriteLine(nomes[i]);
-            }
-        }
-        // E um for com if dentro para definir a media do alunos, e, mostrar quem foi aprovado 
+                Console.WriteLine("Informe a nota " + (indiceColunaMatriz + 1) + " do aluno " + (VetorNomeAlunos[indiceLinhaMatriz]));
+                MatrizNota[indiceLinhaMatriz, indiceColunaMatriz] = float.Parse(Console.ReadLine());
 
-        Console.WriteLine();
-        Console.WriteLine("Pressione ENTER para encerrar.");
+            }
+
+
+        }
+
+        for (int indiceLinhaMatriz = 0; indiceLinhaMatriz < qtdeAlunos; indiceLinhaMatriz++)
+        {
+            float media, soma = 0;
+
+            //for que faz a soma das notas digitadas
+            for (int indiceColunaMatriz = 0; indiceColunaMatriz < 2; indiceColunaMatriz++)
+            {
+                soma += MatrizNota[indiceLinhaMatriz, indiceColunaMatriz];
+            }
+
+            media = soma / 2;
+
+            //if que coloca condição para mostrar os que foram aprovados com base na media 7.5
+            if (media >= 7.5)
+            {
+                Console.WriteLine("Alunos aprovados: ");
+                Console.WriteLine(VetorNomeAlunos[indiceLinhaMatriz]);
+                Console.WriteLine(media);
+            }
+
+        }
+
+        Console.WriteLine("Pressione ENTER para encerrar");
         Console.ReadLine();
+
     }
 }

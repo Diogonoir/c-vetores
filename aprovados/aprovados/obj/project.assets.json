@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ALUNO - CT SISTEMA\\Documents\\logicaa\\Csharp\\Atividade1\\Atividades\\notas\\aprovados\\aprovados\\aprovados.csproj",
+      "projectUniqueName": "C:\\Users\\ALUNO - CT SISTEMA\\Documents\\logicaa\\Csharp\\Atividade1\\Atividades\\aprovados\\aprovados\\aprovados.csproj",
       "projectName": "aprovados",
-      "projectPath": "C:\\Users\\ALUNO - CT SISTEMA\\Documents\\logicaa\\Csharp\\Atividade1\\Atividades\\notas\\aprovados\\aprovados\\aprovados.csproj",
+      "projectPath": "C:\\Users\\ALUNO - CT SISTEMA\\Documents\\logicaa\\Csharp\\Atividade1\\Atividades\\aprovados\\aprovados\\aprovados.csproj",
       "packagesPath": "C:\\Users\\ALUNO - CT SISTEMA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ALUNO - CT SISTEMA\\Documents\\logicaa\\Csharp\\Atividade1\\Atividades\\notas\\aprovados\\aprovados\\obj\\",
+      "outputPath": "C:\\Users\\ALUNO - CT SISTEMA\\Documents\\logicaa\\Csharp\\Atividade1\\Atividades\\aprovados\\aprovados\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ALUNO - CT SISTEMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
